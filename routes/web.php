@@ -13,6 +13,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     $name=request('name');
+//     return $name;
+//     return view('test',[
+//     'name'=> $name
+//     ]);
+
+//      Route::get('/posts/{post}', function ($post) {
+
+//          $posts=[
+//              "my-first-post"=>"hello i m here for you ",
+//              "my-second-post"=>"hello i m your collegue "
+
+//          ];
+//          return view('post',[
+//              'post'=>$posts[$post]
+//          ]);
+ 
+
+// });
+
+Route::get('/posts/{post}','PostsController@show');
+
+
